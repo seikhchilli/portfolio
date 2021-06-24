@@ -2,6 +2,51 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+h2{
+    display:block;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.stopper {
+    animation: showup 7s 1;
+    display: inline-block;
+    overflow: hidden;
+    color: #cd0c2b;
+}
+.slider {
+    width: 220px;
+    animation: reveal 7s 1;
+    display: inline-block;
+    overflow: hidden;
+    color: #495057;
+}
+span{
+    margin-right: 0px;
+    animation: slidein 7s 1;
+}
+
+@keyframes showup{
+    0%{opacity: 0;}
+    20%{opacity:1;}
+    80%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes slidein{
+    0%{margin-right: -614px;}
+    20%{margin-right: -614px;}
+    35%{margin-right: 0px;}
+    100%{margin-right: 0px;}
+}
+
+@keyframes reveal{
+    0%{opacity:0; width:0px;}
+    20%{opacity:1;width:0px;}
+    30%{width: 220px;}
+    80%{opacity: 1;}
+    100%{opacity: 1; width: 220px;}
+}
+
 a{
     text-decoration: none;
 }
@@ -105,17 +150,7 @@ h1 {
     margin-bottom: .5rem;
     margin-top: 0;
     display: block;
-}
-h2 {
-    color: #495057;
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: .5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    
 }
 .container {
     display: table;
@@ -143,5 +178,4 @@ h3, h4 , h5{
 ul{
     list-style: none;
 }
-
 
